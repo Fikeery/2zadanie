@@ -19,20 +19,10 @@ while (true) {
     $choice = trim(fgets(STDIN));
 
     switch ($choice) {
-case '1':
-    echo "Введите первое число: ";
-    $input1 = trim(fgets(STDIN));
-    echo "Введите второе число: ";
-    $input2 = trim(fgets(STDIN));
-
-    if (is_numeric($input1) && is_numeric($input2)) {
-        $number1 = (float)$input1;
-        $number2 = (float)$input2;
-        echo "Числа сохранены: $number1 и $number2\n";
-    } else {
-        echo "Ошибка: оба значения должны быть числами!\n";
-    }
-    break;
+        case '1':
+            // Будет реализовано в ветке feat/input-numbers
+            echo "Функция ввода чисел пока не реализована.\n";
+            break;
         case '2':
             // Сложение — feat/addition
             echo "Сложение пока не реализовано.\n";
