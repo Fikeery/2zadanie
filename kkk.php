@@ -49,10 +49,19 @@ case '2':
             // Деление — feat/division
             echo "Деление пока не реализовано.\n";
             break;
-        case '5':
-            // Возведение в степень — feat/power
-            echo "Возведение в степень пока не реализовано.\n";
-            break;
+case '5':
+    echo "Введите число (основание): ";
+    $base = trim(fgets(STDIN));
+    echo "Введите степень: ";
+    $exp = trim(fgets(STDIN));
+
+    if (!is_numeric($base) || !is_numeric($exp)) {
+        echo "Ошибка: оба значения должны быть числами!\n";
+    } else {
+        $result = pow((float)$base, (float)$exp);
+        echo "Результат: $base ^ $exp = $result\n";
+    }
+    break;
         case '0':
             echo "Выход.\n";
             exit(0);
