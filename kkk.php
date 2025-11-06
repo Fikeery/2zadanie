@@ -41,10 +41,16 @@ case '1':
             // Вычитание — feat/subtraction
             echo "Вычитание пока не реализовано.\n";
             break;
-        case '4':
-            // Деление — feat/division
-            echo "Деление пока не реализовано.\n";
-            break;
+case '4':
+    if ($number1 === null || $number2 === null) {
+        echo "Сначала введите два числа (пункт 1)!\n";
+    } elseif ($number2 == 0) {
+        echo "Ошибка: деление на ноль запрещено!\n";
+    } else {
+        $result = $number1 / $number2;
+        echo "Результат деления: $result\n";
+    }
+    break;
         case '5':
             // Возведение в степень — feat/power
             echo "Возведение в степень пока не реализовано.\n";
