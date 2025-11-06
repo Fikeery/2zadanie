@@ -33,10 +33,14 @@ case '1':
         echo "Ошибка: оба значения должны быть числами!\n";
     }
     break;
-        case '2':
-            // Сложение — feat/addition
-            echo "Сложение пока не реализовано.\n";
-            break;
+case '2':
+    if ($number1 === null || $number2 === null) {
+        echo "Сначала введите два числа (пункт 1)!\n";
+    } else {
+        $result = $number1 + $number2;
+        echo "Результат сложения: $result\n";
+    }
+    break;
         case '3':
             // Вычитание — feat/subtraction
             echo "Вычитание пока не реализовано.\n";
